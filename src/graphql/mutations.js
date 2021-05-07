@@ -1,6 +1,54 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createPerros = /* GraphQL */ `
+  mutation CreatePerros(
+    $input: CreatePerrosInput!
+    $condition: ModelPerrosConditionInput
+  ) {
+    createPerros(input: $input, condition: $condition) {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updatePerros = /* GraphQL */ `
+  mutation UpdatePerros(
+    $input: UpdatePerrosInput!
+    $condition: ModelPerrosConditionInput
+  ) {
+    updatePerros(input: $input, condition: $condition) {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deletePerros = /* GraphQL */ `
+  mutation DeletePerros(
+    $input: DeletePerrosInput!
+    $condition: ModelPerrosConditionInput
+  ) {
+    deletePerros(input: $input, condition: $condition) {
+      id
+      name
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+  }
+`;
 export const createTodo = /* GraphQL */ `
   mutation CreateTodo(
     $input: CreateTodoInput!
@@ -10,6 +58,9 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -24,6 +75,9 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -38,6 +92,9 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      _version
+      _deleted
+      _lastChangedAt
       createdAt
       updatedAt
     }

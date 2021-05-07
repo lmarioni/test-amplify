@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Amplify, { API, graphqlOperation } from 'aws-amplify'
 import { createTodo } from './graphql/mutations'
-import { listTodos } from './graphql/queries'
+import { listTodos, listPerross } from './graphql/queries'
 
 import awsExports from "./aws-exports";
 Amplify.configure(awsExports);
@@ -15,10 +15,18 @@ const App = () => {
 
   useEffect(() => {
     fetchTodos()
+    fetchPerros()
   }, [])
 
   function setInput(key, value) {
     setFormState({ ...formState, [key]: value })
+  }
+
+  async function fetchPerros() {
+    try {
+      const perros = await API.graphql(graphqlOperation(listPerross))
+      console.log('perros', perros)
+    } catch (err) { console.log('error fetching perros', err) }
   }
 
   async function fetchTodos() {
