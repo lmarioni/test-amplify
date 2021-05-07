@@ -26,5 +26,13 @@
       "service": "amplifyhosting",
       "type": "cicd"
     }
+  },
+  "auth": {
+    "testappe6bd7504": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
   }
 }
