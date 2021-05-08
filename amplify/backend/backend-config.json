@@ -26,5 +26,26 @@
       "service": "amplifyhosting",
       "type": "cicd"
     }
+  },
+  "function": {
+    "sharedLayer": {
+      "providerPlugin": "awscloudformation",
+      "service": "LambdaLayer",
+      "build": true
+    },
+    "addPerros": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "sharedLayer",
+          "attributes": [
+            "Arn"
+          ]
+        }
+      ]
+    }
   }
 }

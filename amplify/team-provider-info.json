@@ -40,5 +40,41 @@
         }
       }
     }
+  },
+  "layer": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-testapp-layer-191823-authRole",
+      "UnauthRoleArn": "arn:aws:iam::247943188160:role/amplify-testapp-layer-191823-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::247943188160:role/amplify-testapp-layer-191823-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-testapp-layer-191823-deployment",
+      "UnauthRoleName": "amplify-testapp-layer-191823-unauthRole",
+      "StackName": "amplify-testapp-layer-191823",
+      "StackId": "arn:aws:cloudformation:us-east-1:247943188160:stack/amplify-testapp-layer-191823/4eccea20-b04b-11eb-a802-0aff04b5e65f",
+      "AmplifyAppId": "d1vc0p6utqkuv5"
+    },
+    "categories": {
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d1vc0p6utqkuv5",
+          "type": "cicd"
+        }
+      }
+    },
+    "nonCFNdata": {
+      "function": {
+        "sharedLayer": {
+          "layerVersionMap": {
+            "1": {
+              "permissions": [
+                {
+                  "type": "private"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
   }
 }
