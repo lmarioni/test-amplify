@@ -1,12 +1,16 @@
-
-const {v4: uuid} = require('uuid')
-const Perros = require('/opt/Perros.js')
+const {v4: uuid} = require(process.env.NODE_MODULES + 'uuid')
+const Perros = require(process.env.WORKSPACE + '/opt/Perros.js')
+const Validator = require('./helpers/validator')
 
 exports.handler = async (event) => {
     // TODO implement
     try{
         const a = uuid()
+
+        const v = Validator.validar()
         console.log('a', a)
+        const nodepa = process.env.WORKSPACE
+        console.log('b', process.env.NODE_PATH)
     
        let b =  Perros.saludar()
        console.log('b', b)
@@ -25,3 +29,5 @@ exports.handler = async (event) => {
         console.log('error', e)
     }
 };
+
+this.handler()

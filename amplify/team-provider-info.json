@@ -59,6 +59,16 @@
           "appId": "d1vc0p6utqkuv5",
           "type": "cicd"
         }
+      },
+      "function": {
+        "addPerros": {
+          "deploymentBucketName": "amplify-testapp-layer-191823-deployment",
+          "s3Key": "amplify-builds/addPerros-6331316c68572b6f6549-build.zip"
+        },
+        "sharedLayer": {
+          "deploymentBucketName": "amplify-testapp-layer-191823-deployment",
+          "s3Key": "amplify-builds/sharedLayer-build.zip"
+        }
       }
     },
     "nonCFNdata": {
@@ -70,7 +80,8 @@
                 {
                   "type": "private"
                 }
-              ]
+              ],
+              "hash": "npf041jxWDULOxXVmfyJPQRRdS3iUt/SkFSZZ0Yb7II="
             }
           }
         }
