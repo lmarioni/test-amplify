@@ -1,7 +1,7 @@
 class Perros {
     static saludar() {
        console.log('from saludar')
-       return {hola: 'mundo'}
+       return {hola: 'mundo2'}
    }
 }
 
