@@ -1,5 +1,5 @@
 const {v4: uuid} = require(process.env.NODE_MODULES + 'uuid')
-const Perros = require(process.env.WORKSPACE + '/opt/Perros.js')
+const Perros = require(process.env.SHARED_LAYER + '/opt/Perros.js')
 const Validator = require('./helpers/validator')
 
 exports.handler = async (event) => {

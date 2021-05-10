@@ -1,4 +1,4 @@
-const Perros = require(process.env.WORKSPACE + '/opt/Perros.js')
+const Perros = require(process.env.SHARED_LAYER + '/opt/Perros.js')
 
 class Validator {
     static validar() {
