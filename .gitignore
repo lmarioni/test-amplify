@@ -7,6 +7,7 @@
 
 # testing
 /coverage
+/.vscode/launch.json
 
 # production
 /build
@@ -41,3 +42,4 @@ amplify-build-config.json
 amplify-gradle-config.json
 amplifytools.xcconfig
 .secret-*
+
