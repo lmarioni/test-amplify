@@ -17,6 +17,32 @@
           "appId": "d1vc0p6utqkuv5",
           "type": "cicd"
         }
+      },
+      "function": {
+        "addTodo": {
+          "deploymentBucketName": "amplify-testapp-dev-131946-deployment",
+          "s3Key": "amplify-builds/addTodo-4871734a6a44622f3966-build.zip"
+        },
+        "sharedLayer": {
+          "deploymentBucketName": "amplify-testapp-dev-131946-deployment",
+          "s3Key": "amplify-builds/sharedLayer-build.zip"
+        }
+      }
+    },
+    "nonCFNdata": {
+      "function": {
+        "sharedLayer": {
+          "layerVersionMap": {
+            "1": {
+              "permissions": [
+                {
+                  "type": "private"
+                }
+              ],
+              "hash": "RRRyWdGbGYpRek08g/NJX8eBMBdCFVUM2rIbAHobGU4="
+            }
+          }
+        }
       }
     }
   },
