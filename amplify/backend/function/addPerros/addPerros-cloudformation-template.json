@@ -75,7 +75,10 @@
               "Ref": "AWS::Region"
             },
             "NODE_MODULES": "",
-            "SHARED_LAYER": ""
+            "SHARED_LAYER": "",
+            "LAYER": {
+              "Ref": "functionsharedLayerArn"
+            }
           }
         },
         "Role": {
@@ -87,7 +90,7 @@
         "Runtime": "nodejs14.x",
         "Layers": [
           {
-            "Fn::Sub": "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:sharedLayer-${env}:${latestVersion}"
+            "Fn::Sub": "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:sharedLayer-${env}:1"
           }
         ],
         "Timeout": "25"

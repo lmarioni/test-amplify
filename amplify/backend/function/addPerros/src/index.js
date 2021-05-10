@@ -7,6 +7,7 @@ exports.handler = async (event) => {
     try{
         console.log('hola mundo22')
         console.log('hola mundo')
+        console.log('hola 333 var lastVersion nose que ')
 
         const a = uuid()
 

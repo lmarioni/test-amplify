@@ -31,16 +31,7 @@
             "Ref": "s3Key"
           }
         },
-        "Description": {
-          "Fn::Sub": [
-            "Lambda layer version ${latestVersion}",
-            {
-              "latestVersion": {
-                "Ref": "layerVersion"
-              }
-            }
-          ]
-        },
+        "Description": "Lambda layer version 123",
         "LayerName": {
           "Fn::Sub": [
             "sharedLayer-${env}",
@@ -56,6 +47,27 @@
       "UpdateReplacePolicy": "Retain"
     },
     "LambdaLayerPermissionprivate1": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": {
+          "Fn::Sub": [
+            "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:${layerName}-${env}:${layerVersion}",
+            {
+              "layerName": "sharedLayer",
+              "env": {
+                "Ref": "env"
+              },
+              "layerVersion": "1"
+            }
+          ]
+        },
+        "Principal": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    },
+    "LambdaLayerPermissionprivate2": {
       "Type": "AWS::Lambda::LayerVersionPermission",
       "Properties": {
         "Action": "lambda:GetLayerVersion",
