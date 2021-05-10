@@ -5,6 +5,7 @@ const Validator = require('./helpers/validator')
 exports.handler = async (event) => {
     // TODO implement
     try{
+        console.log('hola mundo22')
         console.log('hola mundo')
 
         const a = uuid()
