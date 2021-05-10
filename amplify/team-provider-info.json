@@ -62,6 +62,16 @@
           "appId": "d1vc0p6utqkuv5",
           "type": "cicd"
         }
+      },
+      "function": {
+        "addTodo": {
+          "deploymentBucketName": "amplify-testapp-testnewlay-170053-deployment",
+          "s3Key": "amplify-builds/addTodo-6e54396372644f6d4165-build.zip"
+        },
+        "sharedLayer": {
+          "deploymentBucketName": "amplify-testapp-testnewlay-170053-deployment",
+          "s3Key": "amplify-builds/sharedLayer-build.zip"
+        }
       }
     },
     "nonCFNdata": {
@@ -73,7 +83,16 @@
                 {
                   "type": "private"
                 }
-              ]
+              ],
+              "hash": "UJOdF61UdRFgHxvSlv86WY4DhM6/VZFpBQ/+jAbq4w4="
+            },
+            "2": {
+              "permissions": [
+                {
+                  "type": "private"
+                }
+              ],
+              "hash": "RRRyWdGbGYpRek08g/NJX8eBMBdCFVUM2rIbAHobGU4="
             }
           }
         }
