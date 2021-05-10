@@ -31,7 +31,16 @@
             "Ref": "s3Key"
           }
         },
-        "Description": "Lambda layer version 1",
+        "Description": {
+          "Fn::Sub": [
+            "Lambda layer version ${latestVersion}",
+            {
+              "latestVersion": {
+                "Ref": "layerVersion"
+              }
+            }
+          ]
+        },
         "LayerName": {
           "Fn::Sub": [
             "sharedLayer-${env}",
@@ -52,14 +61,27 @@
         "Action": "lambda:GetLayerVersion",
         "LayerVersionArn": {
           "Fn::Sub": [
-            "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:${layerName}-${env}:1",
+            "arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:layer:${layerName}-${env}:${layerVersion}",
             {
               "layerName": "sharedLayer",
               "env": {
                 "Ref": "env"
-              }
+              },
+              "layerVersion": "1"
             }
           ]
+        },
+        "Principal": {
+          "Ref": "AWS::AccountId"
+        }
+      }
+    },
+    "LambdaLayerPermissionprivate2": {
+      "Type": "AWS::Lambda::LayerVersionPermission",
+      "Properties": {
+        "Action": "lambda:GetLayerVersion",
+        "LayerVersionArn": {
+          "Ref": "LambdaLayer"
         },
         "Principal": {
           "Ref": "AWS::AccountId"
