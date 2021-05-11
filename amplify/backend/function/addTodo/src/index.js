@@ -1,4 +1,5 @@
 const {v4: uuid} = require(process.env.NODE_MODULES + 'uuid')
+const {v4: uuid} = require(process.env.NODE_MODULES + 'moment')
 
 exports.handler = async (event) => {
     // TODO implement
