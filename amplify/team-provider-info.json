@@ -40,6 +40,14 @@
                 }
               ],
               "hash": "RRRyWdGbGYpRek08g/NJX8eBMBdCFVUM2rIbAHobGU4="
+            },
+            "2": {
+              "permissions": [
+                {
+                  "type": "private"
+                }
+              ],
+              "hash": "7Y/RXYCJgdpe3gX0bDK4B9quzpAIyltOy4kV2MpkHnA="
             }
           }
         }
