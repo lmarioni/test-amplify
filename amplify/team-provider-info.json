@@ -27,6 +27,9 @@
           "deploymentBucketName": "amplify-testapp-dev-131946-deployment",
           "s3Key": "amplify-builds/sharedLayer-build.zip"
         }
+      },
+      "auth": {
+        "testappe6bd7504": {}
       }
     },
     "nonCFNdata": {
